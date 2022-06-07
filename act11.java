@@ -9,8 +9,16 @@ public class act11 {
     public static void main(String[] args) {
         Scanner ejm11 = new Scanner(System.in);
 
+        System.out.println("Ingrese el numero de ventas");
+        int numv= ejm11.nextInt();
+        int sumaV= 0;
+
+        for( int i=0;i<numv;i++){
+            System.out.println("Ingrese precio de venta "+(i+1));
+            int v= ejm11.nextInt();
+
+            sumaV=sumaV+v;
+        }
+        System.out.println("La suma de la venta es "+sumaV);
     }
-
-
-
 }
