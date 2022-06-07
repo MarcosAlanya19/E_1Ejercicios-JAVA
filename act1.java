@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class act1 {
+    //Declara dos variables numéricas
+    // (con el valor que desees), muestra por consola
+    // la suma, resta, multiplicación, división y módulo
     public static void main(String[] args) {
         double n1,n2,s,r,d,m,rs;
         Scanner Ejemplo1 = new Scanner(System.in);
