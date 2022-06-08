@@ -13,11 +13,25 @@ public class act19 {
         System.out.println("Ingresa numero");
         int numPrimo= ejm19.nextInt();
 
-        if(numPrimo<=1||numPrimo%2==0||numPrimo%3==0||numPrimo%7==0||numPrimo%11==0||numPrimo%13==0){
-            System.out.println(numPrimo+" no es un numero primo");
+        if(act19.esPrimo(numPrimo)){
+            System.out.println(numPrimo+" es primo");
         }
         else {
-            System.out.println((numPrimo)+" si es un numero primo");
+            System.out.println(numPrimo+ " no es primo");
         }
+    }
+    public static boolean esPrimo(int numero) {
+        // El 0, 1 y 4 no son primos
+        if (numero == 0 || numero == 1 || numero == 4) {
+            return false;
+        }
+        for (int x = 2; x < numero / 2; x++) {
+            // Si es divisible por cualquiera de estos números, no
+            // es primo
+            if (numero % x == 0)
+                return false;
+        }
+        // Si no se pudo dividir por ninguno de los de arriba, sí es primo
+        return true;
     }
 }
